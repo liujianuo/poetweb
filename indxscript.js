@@ -1,8 +1,10 @@
-var fs = require('fs');
+import sects from './sections/sect.js'
+
 var logoinsert = document.getElementById("topleft");
-for((key, val) in sect){
+
+for (const [key, value] of Object.entries(sects)) {
     var div = document.createElement("div");
     div.className = "section";
-    div.value = val;
+    div.value = value;
     logoinsert.appendChild(div);
 }
